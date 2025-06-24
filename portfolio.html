@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eusha Hasan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #284636;
+      color: white;
+      font-family: Quicksand, sans-serif;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo h3 {
+      color: white;
+      font-size: 24px;
+      padding-left: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding-right: 60px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .li1 a { color: orange; }
+    .li2 a { color: rgb(1, 172, 253); }
+    .li3 a { color: rgb(5, 212, 223); }
+    .li4 a { color: rgb(93, 88, 239); }
+
+    .banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin: 80px 60px 0 60px;
+      gap: 30px;
+    }
+
+    .banner-content {
+      max-width: 580px;
+    }
+
+    .banner-grettings {
+      font-size: 45px;
+      font-weight: 600;
+      color: #ccc;
+    }
+
+    .banner-title {
+      font-size: 85px;
+      font-weight: 800;
+      margin: 10px 0 20px;
+    }
+
+    .banner-description {
+      font-size: 18px;
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .banner-profile-pic {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .section-title,
+    .skills-title {
+      font-size: 38px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about {
+      padding: 80px 20px;
+    }
+
+    .section-description {
+      font-size: 18px;
+      color: #ccc;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .skills {
+      padding: 80px 20px;
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .project {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .project img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .project-title {
+      margin-top: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .contact {
+      padding: 80px 20px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form h3 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #3c3c3e;
+      color: white;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bbb;
+    }
+
+    .btn-primary {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #45a049;
+    }
+
+    .footer {
+      background-color: #1a1a1a;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .footer h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .social-links a span {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .footer-text {
+      color: #999;
+      font-size: 14px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        text-align: center;
+        margin: 40px 20px;
+      }
+
+      .banner-profile-pic {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        justify-content: center;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <h3>Eusha</h3>
+      </div>
+      <nav>
+        <ul>
+          <li class="li1"><a href="#home">Home</a></li>
+          <li class="li2"><a href="#about">About</a></li>
+          <li class="li3"><a href="#projects">Projects</a></li>
+          <li class="li4"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="banner" id="home">
+      <div class="banner-content">
+        <h3 class="banner-grettings">Hi, I am</h3>
+        <h1 class="banner-title">Eusha Hasan</h1>
+        <p class="banner-description">A passionate competitive Programmer. Want to explore new technology such as AI, ML etc.</p>
+      </div>
+      <img class="banner-profile-pic" src="eushapp.jpg" alt="Eusha">
+    </div>
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <h3 class="section-title">About Me</h3>
+      <p class="section-description">
+        I am a passionate competitive programmer. I enjoy developing simple, clean and efficient solutions that provide real value to end users. Thousands of problems have been solved while working with competitive programming. Delivering solutions within time and budget which meets requirements in our field.
+      </p>
+    </section>
+
+    <section class="skills" id="projects">
+      <h3 class="skills-title">Projects</h3>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="bank.jpeg" alt="Bank Management System">
+          <h4 class="project-title">Bank Management System</h4>
+        </div>
+        <div class="project">
+          <img src="face_recognition.jpeg" alt="Face Recognition">
+          <h4 class="project-title">Face Recognition using Java</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-form">
+        <h3>Let's Inbox me</h3>
+        <form action="">
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <textarea name="message" placeholder="Message" rows="6"></textarea>
+          <input class="btn-primary" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3>Connect with me</h3>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/md-eusha-hasan-728253248/" title="LinkedIn">
+        <span>in</span>
+      </a>
+      <a href="https://github.com/eusha06" title="GitHub">
+        <span>Git</span>
+      </a>
+      <a href="https://www.facebook.com/eushahasan06" title="Facebook">
+        <span>f</span>
+      </a>
+    </div>
+    <div class="footer-text">
+      <p>&copy; 2024 Eusha Hasan. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
